@@ -1,0 +1,20 @@
+[
+        {
+            "id": 1001,
+            "imageStr": "jejuIsland", 
+            "talkTitle": "제주도 여행썰",
+            "mbtiType": ["#ENFJ", "#ENTP"]
+        },
+        {
+            "id": 1002,
+            "imageStr": "book", 
+            "talkTitle": "엘라스틱서치 공부 공유하기",
+            "mbtiType": ["#INFP", "#ISTJ"]
+        },
+        {
+            "id": 1003,
+            "imageStr": "appleMango", 
+            "talkTitle": "애플망고 존맛",
+            "mbtiType": ["#ESTP", "#INTP"]
+        }
+]

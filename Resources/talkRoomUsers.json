@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "userId": "John",
+        "profilePic": "https://cdn.pixabay.com/photo/2016/11/18/19/07/happy-1836445_960_720.jpg",
+        "userMbti": ["#ISTJ", "#INTJ"],
+        "favorite": ["여행", "독서"]
+    },
+    {
+        "id": 2,
+        "userId": "Kayle",
+        "profilePic": "https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_960_720.jpg",
+        "userMbti": ["#INFP", "#INTJ"],
+        "favorite": ["여행", "맛집"]
+    },
+    {
+        "id": 3,
+        "userId": "Keen",
+        "profilePic": "https://cdn.pixabay.com/photo/2016/03/23/04/01/woman-1274056_960_720.jpg",
+        "userMbti": ["#INFP", "#INTJ"],
+        "favorite": ["여행", "맛집"]
+    },
+    {
+        "id": 5,
+        "userId": "Hoon",
+        "profilePic": "https://cdn.pixabay.com/photo/2016/12/19/21/36/woman-1919143_960_720.jpg",
+        "userMbti": ["#INFP", "#INTJ"],
+        "favorite": ["여행", "맛집"]
+    },
+    {
+        "id": 6,
+        "userId": "Yuri",
+        "profilePic": "https://cdn.pixabay.com/photo/2015/03/03/18/58/woman-657753_960_720.jpg",
+        "userMbti": ["#INFP", "#INTJ"],
+        "favorite": ["여행", "맛집"]
+    }
+    
+]

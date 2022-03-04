@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1001,
+        "title": "제주도 여행 간 썰",
+        "content": "제주도에서 여행을 갔는데 렌터카 대여하고 갈치 맛집에서 갈치를 맛있게 먹었다.",
+        "source": "카페",
+        "published_at": "2022-02-28",
+        "imageStr": "jejuIsland",
+        "mbti": ["#ISTJ", "#ENFP"]
+    },
+    {
+        "id": 1002,
+        "title": "엘라스틱서치 공부 공유함",
+        "content": "엘라스틱서치는 핫 노드와 쿨 노드로 구성되어 있고 검색엔진이다",
+        "source": "카페",
+        "published_at": "2022-02-20",
+        "imageStr": "book", 
+        "mbti": ["#ENFP", "#ESTJ"]
+    },
+    {
+        "id": 1003,
+        "title": "애플망고 존맛탱",
+        "content": "마트에서 애플망고 사 먹었는데 진짜 맛있었어요. 개 비쌈",
+        "source": "카페",
+        "published_at": "2022-02-21",
+        "imageStr": "appleMango", 
+        "mbti": ["#INTP", "#ISFP"]
+    }
+]

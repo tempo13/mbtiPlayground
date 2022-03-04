@@ -1,0 +1,24 @@
+
+[
+    {
+        "id": 2001,
+        "category": ["#ISTJ", "#여행", "#제주도"],
+        "talkTitle": "ISTJ 제주도 여행썰",
+        "imageStr": "jejuIsland",
+        "icon": "🎙"
+    },
+    {
+        "id": 2002,
+        "category": ["#ENFP", "#공부"],
+        "talkTitle": "엘라스틱서치 공부",
+        "imageStr": "book",
+        "icon": "📚"
+    },
+    {
+        "id": 2003,
+        "category": ["#ENFJ", "#먹방"],
+        "talkTitle": "애플망고 존맛",
+        "imageStr": "appleMango",
+        "icon": "⌚"
+    }
+]
