@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TalkRoomDetail: View {
     @Environment(\.presentationMode) var presentationMode
-    
+    @State private var showingAlert = false
     var roomTitle: String
     var mbtiType: Array<String>
     
@@ -26,12 +26,17 @@ struct TalkRoomDetail: View {
                 .navigationBarHidden(true)
             VStack(alignment: .leading){
                 Button(action: {
-                    presentationMode.wrappedValue.dismiss()
-                }, label: {
-                    Image(systemName: "xmark")
-                        .imageScale(.large)
-                        .padding()
-                })
+                    self.showingAlert = true
+                }){
+                    Text("나가기")
+                }.alert(isPresented: $showingAlert){
+                    Alert(title: Text("채팅방 나가기"), message: Text("채팅방을 나가시겠습니까?"),
+                          primaryButton: .destructive(Text("나가기"), action: {
+                        presentationMode.wrappedValue.dismiss()
+                    })
+                          , secondaryButton: .cancel(Text("취소")))
+                }
+                .padding()
                 Text(roomTitle)
                     .font(.title)
                     .bold()

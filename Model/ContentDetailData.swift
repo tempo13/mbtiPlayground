@@ -20,14 +20,5 @@ struct ContentDetailData: Hashable, Codable, Identifiable {
     var image: Image {
         Image(imageStr)
     }
-    
-//    init(title: String, content: String, source: String, published_at:String, mbti: Array<String>){
-//        self.title = title
-//        self.content = content
-//        self.source = source
-//        self.published_at = published_at
-//        self.mbti = mbti
-//    }
-    
 }
 
