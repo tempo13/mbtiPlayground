@@ -12,27 +12,26 @@ struct SearchHome: View {
     @State private var searchText = ""
     
     var body: some View {
-        NavigationView{
-            List{
-                SearchInput(text: $searchText)
-                    .frame(height: 40)
-                Text("# 인기검색어")
-                    .font(.headline)
-                    .bold()
-                    .padding(.leading, 20)
-                    .padding(.bottom, -5)
-                Rankrow()
-                    .padding(.leading)
-                    .background(
-                        Color.gray
-                        .opacity(0.05)
-                    )
-                ContentRow(contentList: ModelData().contentItems)
-                TalkRoomRow(talkRoomList: ModelData().talkRoomList)
-            }
-            .navigationTitle("검색")
-            .padding(-10)
+        List{
+            Text("# 인기검색어")
+                .padding(.leading, 10)
+                .font(.headline)
+                .listRowInsets(EdgeInsets())
+            Rankrow()
+                .padding(.leading)
+                .background(
+                    Color.gray
+                    .opacity(0.05)
+                )
+                .listRowInsets(EdgeInsets())
+            ContentRow(contentList: ModelData().contentItems)
+                .listRowInsets(EdgeInsets())
+            TalkRoomRow(talkRoomList: ModelData().talkRoomList)
+                .listRowInsets(EdgeInsets())
+            
         }
+        .listStyle(PlainListStyle())
+        .navigationTitle("MBTI 검색엔진")
     }
 }
 

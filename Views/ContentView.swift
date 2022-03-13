@@ -8,36 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var searchText = ""
+    @State private var selection: Tab = .main
+    
+    enum Tab {
+        case main
+        case content
+        case chatRoom
+        case search
+    }
     
     var body: some View {
         NavigationView{
-            List{
-                SearchInput(text: $searchText)
-                    .frame(height: 40)
-                    .listRowInsets(EdgeInsets())
-                Text("# 인기검색어")
-                    .padding(.leading, 10)
-                    .font(.headline)
-                    .listRowInsets(EdgeInsets())
-                Rankrow()
-                    .padding(.leading)
-                    .background(
-                        Color.gray
-                        .opacity(0.05)
-                    )
-                    .listRowInsets(EdgeInsets())
-                ContentRow(contentList: ModelData().contentItems)
-                    .listRowInsets(EdgeInsets())
-                TalkRoomRow(talkRoomList: ModelData().talkRoomList)
-                    .listRowInsets(EdgeInsets())
+            TabView(selection: $selection){
+                SearchHome()
+                .navigationViewStyle(StackNavigationViewStyle())
+                .tabItem{
+                    Label("메인", systemImage: "house")
+                }
+                .tag(Tab.main)
+                
+                SearchInput()
+                    .navigationViewStyle(StackNavigationViewStyle())
+                    .tabItem{
+                        Label("검색", systemImage: "magnifyingglass")
+                    }
+                    .tag(Tab.search)
             }
-            .listStyle(PlainListStyle())
-            .navigationTitle("MBTI 검색엔진")
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
