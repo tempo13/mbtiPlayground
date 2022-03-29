@@ -20,6 +20,7 @@ struct SearchInput: View {
     @ObservedObject var searchStatus = SearchStatus()
     
     @State private var searchResult: [ReviewResData] = []
+    @State private var showingAlert = false
     
     var body: some View {
         
@@ -30,12 +31,13 @@ struct SearchInput: View {
                         sendRequest("http://localhost:8000/search/keyword", parameters: ["search": self.searchKey]){
                             responseObject, error in guard let responseObject = responseObject, error == nil else {
                                 print(error ?? "Unknown error")
+                                self.showingAlert = true
                                 return
                             }
                             let itemList = responseObject["result"] as! [Any]
                             self.searchResult = parseReview(item: itemList)
+                            self.searchStatus.isSearch = true
                         }
-                        self.searchStatus.isSearch = true
                     }
                     .padding(7)
                     .padding(.horizontal, 25)
@@ -79,6 +81,8 @@ struct SearchInput: View {
                     .transition(.move(edge: .top))
                     .animation(.easeInOut, value: isEditing)
                 }
+            }.alert(isPresented: $showingAlert){
+                Alert(title: Text("검색 결과"), message: Text("검색 결과가 없습니다."), dismissButton: .default(Text("닫기")))
             }
         } else {
             VStack(alignment: .leading){

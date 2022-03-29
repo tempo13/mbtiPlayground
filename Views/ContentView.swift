@@ -15,6 +15,7 @@ struct ContentView: View {
         case content
         case chatRoom
         case search
+        case user
     }
     
     var body: some View {
@@ -33,6 +34,11 @@ struct ContentView: View {
                         Label("검색", systemImage: "magnifyingglass")
                     }
                     .tag(Tab.search)
+                LoginView()
+                    .tabItem{
+                        Label("프로필", systemImage: "person.fill")
+                    }
+                    .tag(Tab.user)
             }
         }
     }
